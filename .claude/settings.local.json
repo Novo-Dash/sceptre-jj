@@ -34,7 +34,10 @@
       "Bash(python -m git_filter_repo --version)",
       "Bash(git filter-branch *)",
       "Bash(git stash *)",
-      "Bash(echo \"PXL_20260413_184250979\")"
+      "Bash(echo \"PXL_20260413_184250979\")",
+      "Bash(git update-ref *)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --msg-filter 'sed \"/^Co-Authored-By:.*Claude/d\" | sed \"/^[[:space:]]*$/d\"' -- --all)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter 'sed \"/^Co-Authored-By:.*Claude/d\" | sed \"/^[[:space:]]*$/d\"' -- --all)"
     ]
   }
 }
