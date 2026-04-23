@@ -1,0 +1,206 @@
+/* ─── SCEPTRE-001 · Global Styles ──────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ─── Font Faces ──────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Noken';
+  src: url('/fonts/NokenRegular.woff2') format('woff2');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noken';
+  src: url('/fonts/NokenSemibold.woff2') format('woff2');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brooklyn';
+  src: url('/fonts/Brooklyn-Normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── @theme — Tailwind v4 font + radius registration ─────────────────────── */
+@theme {
+  --font-display: 'Brooklyn', system-ui, sans-serif;
+  --font-body:    'Brooklyn', system-ui, sans-serif;
+  --radius-pill:  9999px;
+  --radius-card:  16px;
+  --radius-input: 12px;
+  --radius-modal: 24px;
+}
+
+/* ─── Design Tokens ───────────────────────────────────────────────────────── */
+:root {
+  /* Light surfaces */
+  --color-bg:             #FAFAF9;
+  --color-surface:        #FFFFFF;
+  --color-surface-alt:    #F5F5F4;
+  --color-border:         #E7E5E4;
+  --color-border-light:   #F0EFEE;
+
+  /* Text */
+  --color-text:           #0A0A0A;
+  --color-text-secondary: #3D3D3D;
+  --color-text-muted:     #737373;
+
+  /* Accent — pure black */
+  --color-accent:         #000000;
+  --color-accent-hover:   #1A1A1A;
+  --color-accent-subtle:  #F5F5F5;
+  --accent-rgb:           0, 0, 0;
+
+  /* Dark sections */
+  --color-bg-dark:        #000000;
+  --color-surface-dark:   #111111;
+  --color-text-dark:      #FFFFFF;
+  --color-text-muted-dark:#A3A3A3;
+  --color-border-dark:    #262626;
+
+  /* Danger */
+  --color-danger:         #DC2626;
+
+  /* Elevation */
+  --shadow-1: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 8px 32px rgba(0, 0, 0, 0.10);
+  --shadow-3: 0 12px 40px rgba(0, 0, 0, 0.20);
+
+  /* Transitions */
+  --transition-micro: all 200ms ease-out;
+  --transition-macro: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Fluid Typography Utilities ──────────────────────────────────────────── */
+@utility text-fluid-hero {
+  font-size: clamp(3.5rem, 9vw + 0.5rem, 9rem);
+}
+@utility text-fluid-section {
+  font-size: clamp(2.8rem, 8vw + 0.5rem, 6rem);
+}
+@utility text-fluid-h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+@utility text-fluid-body {
+  font-size: clamp(1rem, 0.4vw + 0.875rem, 1.2rem);
+}
+@utility text-fluid-sub {
+  font-size: clamp(0.875rem, 0.3vw + 0.75rem, 1.05rem);
+}
+
+/* ─── Base ────────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Brooklyn', system-ui, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Brooklyn', system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ─── App wrapper — grain + safe areas ───────────────────────────────────── */
+.app-wrapper {
+  padding-left:   max(0px, env(safe-area-inset-left));
+  padding-right:  max(0px, env(safe-area-inset-right));
+  padding-bottom: max(0px, env(safe-area-inset-bottom));
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 50;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ─── Focus visible ───────────────────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────── */
+.scrollbar-hide              { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 3px; }
+
+/* ─── Navbar glass ────────────────────────────────────────────────────────── */
+.glass-navbar {
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-navbar { background-color: rgba(255, 255, 255, 0.98) !important; }
+}
+
+/* ─── Modal backdrop ──────────────────────────────────────────────────────── */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* ─── Belt colors ─────────────────────────────────────────────────────────── */
+.belt-black  { background-color: #000000; }
+.belt-purple { background-color: #6B21A8; }
+.belt-brown  { background-color: #7C2D12; }
+.belt-blue   { background-color: #1D4ED8; }
+
+/* ─── prefers-reduced-motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  html { scroll-behavior: auto !important; }
+}
+
+/* ─── prefers-contrast ────────────────────────────────────────────────────── */
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: #000000;
+    --color-text-muted: var(--color-text-secondary);
+  }
+  .glass-navbar {
+    backdrop-filter: none !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #000 !important;
+  }
+}
