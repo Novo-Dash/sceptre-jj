@@ -40,7 +40,7 @@ export function DraggableCardBody({ children, className }: DraggableCardBodyProp
       },
     })
 
-    return () => d.kill()
+    return () => { d.kill() }
   }, [])
 
   return (

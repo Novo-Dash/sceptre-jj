@@ -10,8 +10,6 @@ import {
   Schedule,
   FAQ,
   Location,
-  FinalCTA,
-  StickyCTABar,
 } from './components/sections'
 import { BookingModal } from './components/ui'
 import { useModal } from './hooks/useModal'
