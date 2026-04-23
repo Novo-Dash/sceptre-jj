@@ -182,6 +182,13 @@
 .belt-brown  { background-color: #7C2D12; }
 .belt-blue   { background-color: #1D4ED8; }
 
+/* ─── Adult BJJ card — mobile background position ────────────────────────── */
+@media (max-width: 1023px) {
+  .adults-card {
+    background-position: 65% center !important;
+  }
+}
+
 /* ─── prefers-reduced-motion ──────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

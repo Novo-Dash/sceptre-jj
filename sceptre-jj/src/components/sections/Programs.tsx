@@ -38,7 +38,8 @@ export function Programs({ onBooking }: ProgramsProps) {
             onClick={() => onBooking(program.id)}
             containerClassName={cn(
               colConfig[i],
-              'p-8 flex flex-col'
+              'p-8 flex flex-col',
+              program.id === 'adults' && 'adults-card'
             )}
             style={program.image ? {
               backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 45%, transparent 70%), url(${program.image})`,
@@ -60,7 +61,10 @@ export function Programs({ onBooking }: ProgramsProps) {
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
                   {(program.pills ?? [program.subtitle]).map(pill => (
-                    <span key={pill} className="text-[11px] font-semibold uppercase tracking-[0.18em] px-3 py-1.5 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white">
+                    <span key={pill} className={cn(
+                      'font-semibold uppercase tracking-[0.18em] px-3 py-1.5 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white',
+                      program.id === 'adults' ? 'text-[14px] lg:text-[11px]' : 'text-[11px]'
+                    )}>
                       {pill}
                     </span>
                   ))}
