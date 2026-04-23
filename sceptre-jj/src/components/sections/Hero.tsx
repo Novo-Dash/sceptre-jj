@@ -8,6 +8,14 @@ interface HeroProps {
 
 export function Hero({ onBooking }: HeroProps) {
   const sectionRef = useRef<HTMLElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (video) {
+      video.play().catch(() => {})
+    }
+  }, [])
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -40,6 +48,7 @@ export function Hero({ onBooking }: HeroProps) {
       {/* Background */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <video
+          ref={videoRef}
           src="/videos/herobackground.webm"
           autoPlay
           muted
