@@ -78,10 +78,11 @@ export function BookingModal({ isOpen, defaultProgram, onClose }: BookingModalPr
     const next: typeof errors = {}
     if (!form.firstName.trim()) next.firstName = 'Required'
     if (!form.lastName.trim()) next.lastName = 'Required'
-    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email))
       next.email = 'Enter a valid email address'
     const phone = form.phone.replace(/\D/g, '')
-    if (phone.length < 10) next.phone = 'Phone incomplete — include area code'
+    if (phone.length < 10 || /^(\d)\1{9}$/.test(phone))
+      next.phone = 'Phone incomplete — include area code'
     setErrors(next)
     return Object.keys(next).length === 0
   }, [form])

@@ -88,6 +88,10 @@ export function WhyUs() {
               <img
                 src={item.image}
                 alt={item.label}
+                width={256}
+                height={256}
+                loading="lazy"
+                decoding="async"
                 className="pointer-events-none h-64 w-64 object-cover"
               />
               <p className="mt-3 text-center text-sm font-semibold tracking-wide text-neutral-700">

@@ -24,7 +24,17 @@
       "Bash(ffmpeg -y -i 'D:/DOCUMENTOS/NovoDash/Sceptre Jiu Jitsu/sceptre-jj/public/images/polaroids/Frame __TRACKED_VAR__.png' 'D:/DOCUMENTOS/NovoDash/Sceptre Jiu Jitsu/sceptre-jj/public/images/polaroids/Frame __TRACKED_VAR__.webp' -hide_banner -loglevel error)",
       "Bash(ffmpeg -y -i 'D:/DOCUMENTOS/NovoDash/Sceptre Jiu Jitsu/sceptre-jj/public/videos/herobackground.mp4' -c:v libvpx-vp9 -crf 35 -b:v 0 -deadline good -cpu-used 2 -c:a libopus 'D:/DOCUMENTOS/NovoDash/Sceptre Jiu Jitsu/sceptre-jj/public/videos/herobackground.webm' -hide_banner -loglevel error)",
       "Bash(ffmpeg -y -i 'D:/DOCUMENTOS/NovoDash/Sceptre Jiu Jitsu/sceptre-jj/public/videos/PXL_20260413_184250979.mp4' -c:v libvpx-vp9 -crf 35 -b:v 0 -deadline good -cpu-used 2 -c:a libopus 'D:/DOCUMENTOS/NovoDash/Sceptre Jiu Jitsu/sceptre-jj/public/videos/PXL_20260413_184250979.webm' -hide_banner -loglevel error)",
-      "PowerShell(Remove-Item *)"
+      "PowerShell(Remove-Item *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git filter-repo *)",
+      "Bash(python -m git_filter_repo --version)",
+      "Bash(git filter-branch *)",
+      "Bash(git stash *)",
+      "Bash(echo \"PXL_20260413_184250979\")"
     ]
   }
 }

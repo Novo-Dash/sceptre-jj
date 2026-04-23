@@ -34,6 +34,7 @@ export function Instructors() {
                 alt={instructor.imageAlt}
                 loading="lazy"
                 decoding="async"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             ) : (

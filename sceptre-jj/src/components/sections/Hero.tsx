@@ -45,6 +45,7 @@ export function Hero({ onBooking }: HeroProps) {
           muted
           loop
           playsInline
+          preload="none"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/70" />

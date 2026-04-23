@@ -66,6 +66,8 @@ export function Navbar({ onBooking }: NavbarProps) {
             <img
               src="/images/logo2.webp"
               alt="Sceptre Jiu-Jitsu"
+              width={160}
+              height={80}
               className="h-10 w-auto transition-all duration-300"
               style={{ filter: scrolled ? 'none' : 'invert(1)' }}
             />

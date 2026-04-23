@@ -7,7 +7,7 @@ export function Location() {
         src={mapsEmbed}
         width="100%"
         height="480"
-        style={{ border: 0, display: 'block' }}
+        style={{ border: 0, display: 'block', aspectRatio: '16 / 9' }}
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

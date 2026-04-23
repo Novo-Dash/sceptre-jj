@@ -16,7 +16,7 @@
     <meta property="og:url"          content="https://sceptrejiujitsu.com/" />
     <meta property="og:title"        content="Sceptre Jiu-Jitsu | San Mateo, CA" />
     <meta property="og:description"  content="Modern BJJ for kids, adults &amp; women. IBJJF champion instructors. First class free." />
-    <meta property="og:image"        content="https://sceptrejiujitsu.com/images/og-sceptre.jpg" />
+    <meta property="og:image"        content="https://sceptrejiujitsu.com/images/og-sceptre.webp" />
     <meta property="og:image:width"  content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale"       content="en_US" />
@@ -25,27 +25,22 @@
     <meta name="twitter:card"        content="summary_large_image" />
     <meta name="twitter:title"       content="Sceptre Jiu-Jitsu — San Mateo, CA" />
     <meta name="twitter:description" content="Modern BJJ. IBJJF champions. First class free." />
-    <meta name="twitter:image"       content="https://sceptrejiujitsu.com/images/og-sceptre.jpg" />
+    <meta name="twitter:image"       content="https://sceptrejiujitsu.com/images/og-sceptre.webp" />
 
     <!-- ─── Favicon ─────────────────────────────────────────────────────── -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon"  href="/favicon.ico" />
     <link rel="apple-touch-icon"          href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#000000" />
 
-    <!-- ─── Preloads — critical path ────────────────────────────────────── -->
-    <!-- [DESCOMENTE após Inter-variable.woff2 estar em /public/fonts/] -->
-    <!--
-    <link rel="preload" as="font" href="/fonts/Inter-variable.woff2" type="font/woff2" crossorigin />
-    -->
-    <!-- [DESCOMENTE após fonte display ser confirmada] -->
-    <!--
-    <link rel="preload" as="font" href="/fonts/[display-font].woff2" type="font/woff2" crossorigin />
-    -->
-    <!-- [DESCOMENTE após hero.webp estar em /public/images/] -->
-    <!--
-    <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />
-    -->
+    <!-- ─── Resource hints ──────────────────────────────────────────────── -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect"   href="https://maps.googleapis.com" />
+    <link rel="preconnect"   href="https://maps.gstatic.com" crossorigin />
+
+    <!-- ─── Font preloads ───────────────────────────────────────────────── -->
+    <link rel="preload" as="font" href="/fonts/NokenSemibold.woff2"  type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="/fonts/Brooklyn-Normal.woff2" type="font/woff2" crossorigin />
 
     <!-- ─── Schema.org ──────────────────────────────────────────────────── -->
     <script type="application/ld+json">
@@ -56,7 +51,6 @@
       "description": "Modern and inclusive Brazilian Jiu-Jitsu in San Mateo, CA. Kids, Adults and Women's programs led by expert instructors.",
       "url": "https://sceptrejiujitsu.com",
       "telephone": "+16507537486",
-      "email": "[EMAIL — CONFIRMAR]",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "3b N Kingston St",
@@ -85,8 +79,7 @@
         { "@type": "Person", "name": "Miranda",      "jobTitle": "Women's Instructor" }
       ],
       "sameAs": [
-        "[INSTAGRAM — CONFIRMAR]",
-        "[FACEBOOK — CONFIRMAR]"
+        "https://www.instagram.com/sceptrejj"
       ]
     }
     </script>

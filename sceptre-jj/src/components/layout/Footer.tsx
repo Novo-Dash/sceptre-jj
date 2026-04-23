@@ -21,6 +21,8 @@ export function Footer({ onBooking }: FooterProps) {
             <img
               src="/images/logo2.webp"
               alt="Sceptre Jiu-Jitsu"
+              width={200}
+              height={100}
               className="h-14 w-auto object-contain"
               style={{ filter: 'invert(1)' }}
             />
