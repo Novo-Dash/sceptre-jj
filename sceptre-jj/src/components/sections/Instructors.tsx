@@ -41,8 +41,8 @@ export function Instructors() {
               <div className="absolute inset-0 bg-[var(--color-bg-dark)]" />
             )}
 
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent" />
+            {/* Fade */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black from-0% to-transparent to-[45%]" />
 
             {/* Content */}
             <div className="absolute inset-0 z-10 flex flex-col justify-end gap-4 p-7">

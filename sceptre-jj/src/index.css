@@ -93,6 +93,15 @@
   font-size: clamp(0.875rem, 0.3vw + 0.75rem, 1.05rem);
 }
 
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
 /* ─── Base ────────────────────────────────────────────────────────────────── */
 @layer base {
   *, *::before, *::after {
