@@ -115,7 +115,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    min-width: 350px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -189,6 +188,18 @@
   .adults-card {
     background-position: 65% center !important;
   }
+}
+
+/* ─── Schedule swipe (mobile) ────────────────────────────────────────────── */
+.schedule-scroll {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.schedule-scroll > * {
+  scroll-snap-align: start;
 }
 
 /* ─── prefers-reduced-motion ──────────────────────────────────────────────── */

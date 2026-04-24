@@ -59,7 +59,7 @@ export function Schedule() {
     <section
       id="schedule"
       aria-labelledby="schedule-heading"
-      className="relative py-20 overflow-hidden"
+      className="relative py-20"
     >
       {/* Video background */}
       <video
@@ -85,11 +85,11 @@ export function Schedule() {
           headlineStyle={{ fontFamily: "'Noken', system-ui, sans-serif" }}
         />
 
-        {/* Mobile: infinite marquee */}
-        <div className="lg:hidden overflow-hidden -mx-6">
-          <div className="schedule-marquee flex gap-3 w-max px-6">
-            {[...DAYS, ...DAYS].map((day, idx) => (
-              <DayCard key={`${day}-${idx}`} day={day} slots={byDay[day]} />
+        {/* Mobile: swipeable horizontal scroll */}
+        <div className="lg:hidden schedule-scroll scrollbar-hide -mx-6 px-6">
+          <div className="flex gap-3 w-max pb-2">
+            {DAYS.map((day) => (
+              <DayCard key={day} day={day} slots={byDay[day]} />
             ))}
           </div>
         </div>
