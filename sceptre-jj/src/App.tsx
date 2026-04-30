@@ -7,7 +7,6 @@ import {
   WhyUs,
   Instructors,
   Testimonials,
-  Schedule,
   FAQ,
   Location,
 } from './components/sections'
@@ -35,7 +34,6 @@ export function App() {
         <WhyUs />
         <Instructors />
         <Testimonials />
-        <Schedule />
         <FAQ />
         <Location />
       </main>

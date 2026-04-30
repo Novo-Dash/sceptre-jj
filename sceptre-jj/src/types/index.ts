@@ -46,19 +46,6 @@ export interface FaqItem {
   answer: string
 }
 
-// ─── Schedule ─────────────────────────────────────────────────────────────────
-export type DayOfWeek = 'Mon' | 'Tue' | 'Wed' | 'Thu' | 'Fri' | 'Sat' | 'Sun'
-
-export interface ScheduleSlot {
-  id: string
-  day: DayOfWeek
-  time: string
-  duration: string
-  className: string
-  programId: ProgramId | 'all'
-  instructor?: string
-}
-
 // ─── Modal ────────────────────────────────────────────────────────────────────
 export type ModalStep = 'form' | 'loading' | 'success' | 'error'
 

@@ -8,7 +8,6 @@ interface NavbarProps {
 
 const navLinks = [
   { label: 'Programs',    href: '#programs' },
-  { label: 'Schedule',    href: '#schedule' },
   { label: 'Instructors', href: '#instructors' },
   { label: 'About',       href: '#why-us' },
 ]
